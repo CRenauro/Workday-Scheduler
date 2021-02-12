@@ -1,15 +1,15 @@
-.past {
+.past-hour {
     color: #c2b1b1;
 }
 
 
-.present {
+.present-hour {
     color: #de3f39;
 }
 
 
 
-.future {
+.future-hour {
     color: #27c447;
 }
 

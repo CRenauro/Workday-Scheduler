@@ -1,4 +1,7 @@
 # Workday-Scheduler
+https://crenauro.github.io/Workday-Scheduler/
+
+https://github.com/CRenauro/Workday-Scheduler
 
 
 ## Description 

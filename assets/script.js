@@ -20,19 +20,19 @@ $("col-1 hour").append(element);
 var today = moment();
 $("#dateToday").text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm'));
 
-var presentHour = ["hour-9", "hour-10", "hour-11", "hour-12", "hour-13", "hour-14", "hour-15", "hour-16", "hour-17" ];
+var presentHour = ["9", "10", "11", "12", "13", "14", "15", "16", "17" ];
 
 
 // //then you need to find a way to loop all your hour blocks get from every element the hour and compare it with the currentHour
 // var presentHour = moment().hours();
 
 
-if (presentHour < moment) {
-    $(textEntry).addClass("past-hour");
+if (presentHour < today) {
+    $(textarea).addClass("past-hour");
 } else if (presentHour > moment) {
-    $(textEntry).addClass("future-hour");
+    $(textarea).addClass("future-hour");
 } else {
-    $(textEntry).addClass("present-hour");
+    $(textarea).addClass("present-hour");
 }
 
 // //check to see if we have moved past the current time

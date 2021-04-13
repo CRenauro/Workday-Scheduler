@@ -1,15 +1,22 @@
 .past-hour {
-    color: #c2b1b1;
+    color: white;
+    background-color: #de3f39;
 }
 
 
 .present-hour {
-    color: #de3f39;
+    color: white;
+    background-color: #27c447;
 }
 
 
 
 .future-hour {
-    color: #27c447;
+    color: white;
+    background-color: #c2b1b1;
+}
+
+body, .jumbotron {
+    background-image: url(./sky.jpg);
 }
 

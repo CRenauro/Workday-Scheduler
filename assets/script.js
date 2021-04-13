@@ -1,73 +1,41 @@
-//$(document).ready(function(){
-
-//check for button clicks inside an on click
-$(".saveBtn").on("click", function(){
-    //grab values for time and text
-    var value = $(this).siblings(".textInput").val()
-    var time = $(this).parent().text()
-    console.log(value, time)
-    //save to local storage
-    localStorage.setItem(time, value)
-}) 
-
-var container = $(".container")
-container.children().each(function() {
-var element = $(this).prop('outerHTML');
-$("col-1 hour").append(element);
-})
-
-
-var today = moment();
+var todayDate = moment();
 $("#dateToday").text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm'));
 
-var presentHour = ["9", "10", "11", "12", "13", "14", "15", "16", "17" ];
+var presentHour = ["hour9", "hour10", "hour11", "hour12", "hour13", "hour14", "hour15", "hour16", "hour17" ];
+
+$(document).ready(function () {
+    $(".saveBtn").on("click", function () {
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        localStorage.setItem(time, text);
+    })
+
+    function timeTracker() {
+        var timeNow = moment().hour();
+
+        $(".time-block").each(function () {
+            var blockTime =parseInt($(this).attr("id").split("hour")[1]);
+
+            if(blockTime < timeNow) {
+                $(this).removeClass("future-hour");
+                $(this).removeClass("present-hour");
+                $(this).addClass("past-hour");
+            }
+            else if (blockTime === timeNow) {
+                $(this).removeClass("past-hour");
+                $(this).removeClass("future-hour");
+                $(this).addClass("present-hour");
+            }
+            else {
+                $(this).removeClass("present-hour");
+                $(this).removeClass("past-hour");
+                $(this).addClass("future-hour");
+            }
+        })
+    }
 
 
-// //then you need to find a way to loop all your hour blocks get from every element the hour and compare it with the currentHour
-// var presentHour = moment().hours();
+    timeTracker();
 
-
-if (presentHour < today) {
-    $(textarea).addClass("past-hour");
-} else if (presentHour > moment) {
-    $(textarea).addClass("future-hour");
-} else {
-    $(textarea).addClass("present-hour");
-}
-
-// //check to see if we have moved past the current time
-// //if
-// //addClass
-// //addClass ("past")
-// if (pastTime > currentTime) {
-//     $(textEntry).addClass ("past-hour");
-// }
-
-
-// //check to see if current time
-// // for loop
-// //else if
-// //removeClass
-// //addClass
-// if (currentTime == currentTime) {
-//     $(textEntry).removeClass ("past-hour")
-// } else {
-//     $(textEntry).addClass ("present-hour");
-
-// //check to see if time is future
-// //else
-// //remove class
-// //remove class
-// //add class
-// if (currentTime < futureHour) {
-//     $(textEntry).removeClass ("past-hour") 
-// }   else if {
-//     $(textEntry).removeClass ("present-hour")
-// }   else {
-//     $(textEntry).addClass ("future-hour")
-// };   
-
-
-// //load any saved data from localStorage
-
-// //});
+})

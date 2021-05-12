@@ -23,7 +23,7 @@ When the page is refreshed the saved events persist.
 
 ## Description
 
-This app uses HTML, CSS, the Moment.js library to get the local time and saves the data to local storage.
+This app uses HTML, CSS, the Moment.js library to get the local time and saves the data to Local Storage.
 
 ## Credits
 

@@ -1,22 +1,38 @@
 .past-hour {
-    color: white;
-    background-color: #de3f39;
+  color: white;
+  background-color: #de3f39;
 }
-
 
 .present-hour {
-    color: white;
-    background-color: #27c447;
+  color: white;
+  background-color: #27c447;
 }
-
-
 
 .future-hour {
-    color: white;
-    background-color: #c2b1b1;
+  color: white;
+  background-color: #c2b1b1;
 }
 
-body, .jumbotron {
-    background-image: url(./sky.jpg);
+body,
+.jumbotron {
+  background-image: url(./sky.jpg);
 }
 
+.container {
+  padding-bottom: 5%;
+  font-family: "Newsreader", serif !important;
+  font-weight: 300;
+}
+
+.jumbotron {
+  max-height: 15%;
+  font-family: "Newsreader", serif !important;
+}
+
+.custom {
+  background-color: rgb(230, 192, 71);
+  padding: 15px;
+  border-radius: 25px;
+  width: 75%;
+  margin-left: 12%;
+}

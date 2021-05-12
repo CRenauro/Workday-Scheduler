@@ -1,17 +1,30 @@
+<h1 align="center">Work Day Scheduler 🖊️ </h1>
 
-# Workday-Scheduler
-https://crenauro.github.io/Workday-Scheduler/
+### 🏠 https://crenauro.github.io/Workday-Scheduler/
 
-https://github.com/CRenauro/Workday-Scheduler
+<br/>
 
-![Workday-Scheduler](https://user-images.githubusercontent.com/71401585/114612012-96c92680-9c6f-11eb-9c40-3dc2637b44cc.png)
+# Install
 
+Open the above link in your browser.
+<br/>
+<br/>
 
-## Description 
+# Usage
 
-Add important events to a daily planner,
-so that I can manage my time effectively
+![scheduler](./assets/scheduler.png)
 
+Each time block is color coded to note whether it is in the past, present or future. When a timeblock is clicked,
+an event can be entered and saved in local storage by clicking on the save icon at the end of the row.
+When the page is refreshed the saved events persist.
+
+<br/>
+<br/>
+
+## Description
+
+This app uses HTML, CSS, the Moment.js library to get the local time and saves the data to local storage.
 
 ## Credits
- Thank you to my tutor and AskBCS.
+
+Thank you to my tutor and AskBCS. Background photo is my own.
